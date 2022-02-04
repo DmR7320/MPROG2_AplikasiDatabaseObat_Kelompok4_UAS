@@ -81,6 +81,20 @@ class TampilanApp2 extends State<TampilanApp1> {
     );
   }
 
+  showAlertDialog2(BuildContext context) {
+    AlertDialog alert = const AlertDialog(
+      title: Text("Selamat"),
+      content: Text("Username dan Password sudah diinput."),
+    );
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -154,6 +168,9 @@ class TampilanApp2 extends State<TampilanApp1> {
                       String pword = daftarpasswordController.text;
                       await _akun.add(
                           {"id": id, "username": uname, "password": pword});
+                      showAlertDialog2(context);
+                      daftarusernameController.text = "";
+                      daftarpasswordController.text = "";
                     }
                   },
                   style: TextButton.styleFrom(

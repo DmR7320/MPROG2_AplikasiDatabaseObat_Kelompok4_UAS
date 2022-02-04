@@ -126,7 +126,7 @@ class UtamaApp2 extends State<UtamaApp1> {
                                 maxCrossAxisExtent: 300,
                                 crossAxisSpacing: 10,
                                 mainAxisSpacing: 10,
-                                mainAxisExtent: 450),
+                                mainAxisExtent: 400),
                         itemCount: snapshot.data!.docs.length,
                         itemBuilder: (BuildContext context, int index) {
                           return Container(
@@ -154,12 +154,6 @@ class UtamaApp2 extends State<UtamaApp1> {
                               const SizedBox(
                                 height: 10,
                               ),
-                              TextButton(
-                                  style: TextButton.styleFrom(
-                                      backgroundColor: Colors.white),
-                                  onPressed: () {},
-                                  child: const Text("Beli",
-                                      style: TextStyle(color: Colors.green))),
                               const SizedBox(
                                 height: 10,
                               ),
